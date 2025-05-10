@@ -35,7 +35,12 @@ class _NameScreenState extends State<NameScreen> {
     final counter = context.read<CounterProvider>();
 
     return Scaffold(
-      appBar: AppBar(leading: const BackButton()),
+      backgroundColor: Colors.grey[100],
+
+      appBar: AppBar(
+        leading: const BackButton(),
+        backgroundColor: Colors.grey[100],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

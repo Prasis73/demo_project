@@ -66,7 +66,7 @@ class HomePageScreen extends StatelessWidget {
                   onTap: () {
                     counter.name.isEmpty
                         ? showToast(context)
-                        : counter.increment();
+                        : counter.decrement();
                   },
                   child: Container(
                     height: 60,
@@ -85,7 +85,12 @@ class HomePageScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Center(child: const Icon(Icons.add, size: 35)),
+                    child: Center(
+                      child: Icon(
+                        counter.name.isEmpty ? Icons.add : Icons.remove,
+                        size: 35,
+                      ),
+                    ),
                   ),
                 ),
 
@@ -94,7 +99,7 @@ class HomePageScreen extends StatelessWidget {
                   onTap: () {
                     counter.name.isEmpty
                         ? showToast(context)
-                        : counter.decrement();
+                        : counter.increment();
                   },
                   child: Container(
                     height: 60,
@@ -111,7 +116,12 @@ class HomePageScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Center(child: const Icon(Icons.remove, size: 35)),
+                    child: Center(
+                      child: Icon(
+                        counter.name.isEmpty ? Icons.remove : Icons.add,
+                        size: 35,
+                      ),
+                    ),
                   ),
                 ),
               ],
